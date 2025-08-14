@@ -101,9 +101,27 @@
 // 6. This if/else statement does not work. 
 // Try to fix it: var greeting; var hour = 13; if (hour < 18) 
 //   { greeting = "Good day"; else greeting = "Good evening"; }
+// var time=new Date()
 // var greeting;
-// var hour=new Date()
+// var hour= time.getHours ()
 
-// if (hour < 18) {alert( greeting = "Good day") }
+// if (hour > 18) {alert( greeting = "Good day") }
 //   else {alert(greeting = "Good evening") }
   
+let time = parseInt(prompt("وقت درج کریں (24 گھنٹے فارمیٹ میں، مثلاً 1900):"));
+
+if (time >= 0 && time < 1200) {
+    console.log("Good Morning!");
+} 
+else if (time >= 1200 && time < 1700) {
+    console.log("Good Afternoon!");
+} 
+else if (time >= 1700 && time < 2100) {
+    console.log("Good Evening!");
+} 
+else if (time >= 2100 && time <= 2359) {
+    console.log("Good Night!");
+} 
+else {
+    console.log("غلط وقت کا ان پٹ، براہ کرم 0000 سے 2359 کے درمیان لکھیں۔");
+}
